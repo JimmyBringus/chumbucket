@@ -1,0 +1,32 @@
+
+.exerciseHeader, .exerciseFooter, .exerciseMain {
+    margin: 0 10px 10px 10px;
+}
+
+.exerciseMainFeatures {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.exerciseMainFeatures .exerciseMarketingFeature {
+    justify-content: space-evenly;
+    display: flex;
+    width: 50%;
+}
+
+.exerciseMainFeatures .exerciseMarketingFeature {
+    
+}
+
+.exerciseAdditionalFeatures {
+    justify-content: space-evenly;
+    display: flex;
+    gap: 5px;
+}
+
+.exerciseAdditionalFeatures .exerciseMarketingFeature {
+    width: 33.3%;
+    margin-top: 5px;
+}

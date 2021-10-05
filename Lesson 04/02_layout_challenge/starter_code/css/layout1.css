@@ -1,0 +1,22 @@
+
+.exerciseHeader, .exerciseFooter, .exerciseMain {
+    margin: 0 10px 10px 10px;
+}
+
+.exerciseHeader, .exerciseFooter {
+    min-height: 200px;
+    max-height: 300px;
+}
+
+.exerciseMain {
+    display: flex;
+    justify-content: space-between;
+}
+
+.exerciseMainContent {
+    width: 66%;
+}
+
+.exerciseMainAside {
+    width: 33%;
+}
