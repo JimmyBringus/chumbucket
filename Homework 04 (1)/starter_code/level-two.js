@@ -5,16 +5,19 @@
 let score = 0;
 let arenaEl = document.querySelector('.js-arena');
 let scoreEl = document.querySelector('.js-score');
+let ballGroup = document.querySelectorAll('.js-ball');
 
-arenaEl.addEventListener('click', function() {
-  if ( e.target.classList.contains('js-ball') ) {
-    score += 10;
-    if ( score < 100 ) {
-      scoreEl.innerText = score;
-    } else {
-      declareWinner();
+ballGroup.forEach(ball=>{
+  ball.addEventListener('click', function(e) {
+    if ( e.target.classList.contains('js-ball') ) {
+      score += 10;
+      if ( score < 100 ) {
+        scoreEl.innerText = score;
+      } else {
+        declareWinner();
+      }
     }
-  }
+  })
 })
 
 function declareWinner() {
