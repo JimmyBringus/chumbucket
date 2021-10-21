@@ -108,15 +108,26 @@ a {
     padding: 0;
     position: relative;
     display:block;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .responsiveTileGroupItem {
     padding: 10px;
     overflow: hidden;
+    width: 50%;
 }
 
+@media (max-width:760px){
+    .responsiveTileGroupItem{
+        width: 100%;
+        border-bottom: 1px solid #afafaf;
+    }
+    .responsiveTileGroupItem:last-child{
+        border-bottom: none;
+    }
 
-
+}
 
 .copyright {
     font-family: 'Merriweather', serif;
