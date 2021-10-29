@@ -1,0 +1,287 @@
+/*
+ * Lay this page out - make it responsive, use grid, flex, position and media queries where needed.
+ *
+ * Colors-
+ * Green: #14a96d
+ * White: #fff
+ * Light gray: #f4f5f6
+ * Border gray: #cfd7de
+ * Dark text: #1b1f23
+ * Lighter text: #66727c
+ * Blue for links: #06748a
+ * Blue for hovered links: #033641
+ */
+
+/* Globals */
+body {
+  font-family: "Cabin", sans-serif;
+  font-size: 18px;
+}
+
+.container_fixed {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+.btn {
+  display: block;
+  background: #14a96d;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #0d784d;
+}
+
+.btn-hero {
+  width: 200px;
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+header img {
+  width: 180px;
+}
+
+.logo {
+  margin: 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.navlink {
+  list-style: none;
+  margin: 0 0 0 30px;
+}
+
+.sign-up {
+  margin-left: 250px;
+}
+
+.navlink a {
+  color: #1b1f23;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.burger {
+  font-size: 1.2em;
+  display: none;
+  cursor:pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    background: white;
+  }
+
+  .burger {
+      display: block;
+      margin-right: 30px;
+      color: black;
+  }
+  .navigation {
+      margin: 0;
+      background: #343434;
+      position: absolute;
+      right: -100%;
+      top: 70px;
+      width: 50%;
+      height: calc(100% - 70px);
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 0;
+      transition: all 400ms;
+  }
+  .navlink {
+      text-align: center;
+      margin: 0;
+  }
+  .navlink a:link {
+    color: white;
+  }
+  .sign-up {
+    margin-left: 0;
+  }
+  .nav-active {
+      right: 0;
+  }
+}
+
+/* Hero */
+.rover-hero-container {
+  background: url("../img/hero.jpg") no-repeat;
+  background-size: cover;
+  padding: 120px 0;
+  color: #66727c;
+}
+
+.hero-callout {
+  max-width: 500px;
+}
+
+@media screen and (max-width: 1220px) {
+  .hero-callout {
+    padding-left: 20px;
+  }
+  
+}
+
+@media screen and (max-width: 960px) {
+  .hero-callout {
+    background: white;
+    padding: 20px;
+  }
+}
+
+.hero_hdr {
+  font-size: 3rem;
+}
+
+.hero_tagline {
+  font-size: 2rem;
+  line-height: 2.6rem;
+}
+
+/* Rover Facts */
+.rover-middle-section {
+  margin-bottom: 80px;
+}
+
+.section_hdr {
+  text-align: center;
+}
+
+.rover-facts-2col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .rover-facts-2col {
+    padding-left: 1rem;
+    padding-right:1rem;
+  }
+}
+
+.rover-facts-container ul {
+  list-style: none;
+}
+
+.rover-facts-container li {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin-bottom: 20px;
+}
+
+.rover-cta-box {
+  border: 1px solid #cfd7de;
+  border-radius: 5px;
+}
+
+.rover-cta-header {
+  background: #f4f5f6;
+  display: flex;
+  padding: 20px;
+}
+
+.rover-cta-header img {
+  width: 50px;
+}
+
+.rover-cta-header p {
+  margin-left: 20px;
+}
+
+.rover-cta-box-content {
+  padding: 0 30px;
+}
+
+.rover-facts {
+  list-style: none;
+  padding: 30px;
+}
+
+.rover-facts li {
+  margin-bottom: 20px;
+}
+
+.rover-facts i {
+  color: #14a96d;
+}
+
+.rover-protections {
+  text-align: center;
+}
+
+/* Rover Quote */
+.rover-action-shot {
+  background: url("../img/lady-with-her-dogs.jpg") no-repeat;
+  background-size: cover;
+  padding: 120px 0;
+  color: #66727c;
+}
+
+.rover-action-quote-container {
+  background: white;
+  max-width: 500px;
+  border: 1px solid grey;
+  padding: 20px;
+  color: black;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  margin-left: 100px;
+  /* Offset */
+  margin-top: -170px;
+}
+
+@media screen and (max-width: 760px) {
+  .rover-action-quote-container {
+    margin: 0;
+  }
+}
+
+.rover-action-quote-tagline {
+  font-size: 1.2rem;
+}
+
+/* Bottom Section */
+.section_hdr {
+  margin: 60px 0;
+}
+
+.rover-123-item-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .rover-123-item-container {
+    padding-left: 1rem;
+    padding-right:1rem;
+  }
+}
+
+.rover-123-item img {
+  height: 100px;
+}

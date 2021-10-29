@@ -1,0 +1,209 @@
+/*
+ * Lay this page out - make it responsive, use grid, flex, position and media queries where needed.
+ *
+ * Colors-
+ * Green: #14a96d
+ * White: #fff
+ * Light gray: #f4f5f6
+ * Border gray: #cfd7de
+ * Dark text: #1b1f23
+ * Lighter text: #66727c
+ * Blue for links: #06748a
+ * Blue for hovered links: #033641
+ */
+
+/* Globals */
+body {
+  font-family: "Cabin", sans-serif;
+  display: block;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.btn {
+  display: block;
+  background-color: #14a96d;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #0d784d;
+}
+
+/* Header */
+
+.container_fixed {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.site-header-inner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.logo img {
+  width: 180px;
+}
+
+.logo {
+  margin: 0;
+}
+
+.navigation {
+  display: flex; 
+  font-size: 1rem;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.navlink {
+  list-style: none;
+  margin: 0 0 0 30px;
+}
+
+.navlink a {
+  color: #1b1f23;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.sign-up {
+  margin: 0 0 0 200px;
+}
+
+.burger {
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+
+  .burger {
+    display: block;
+    margin-right: 30px;
+  }
+
+  .navigation {
+    background: #343434;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    transition: all 300ms;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+  }
+
+  .navlink {
+    margin: 0;
+    text-align: center;
+  }
+
+  .navlink a{
+    color: white;
+  }
+
+  .sign-up {
+    margin-left: 0;
+  }
+
+  .nav-active {
+    height: calc(100% - 70px);
+    right: 0px;
+    width: 50%;
+  }
+}
+
+
+/* Hero */
+
+.rover-hero-container {
+  background: url("../img/hero.jpg") no-repeat;
+  background-size: cover;
+  /* height: 500px; */
+  color: #66727c;
+  padding: 120px 0;
+}
+
+.hero-callout{
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+.hero_hdr {
+  font-size: 3rem;
+}
+
+.hero_tagline {
+  font-size: 2rem;
+  line-height: 125%;
+}
+
+.btn-hero {
+  font-size: 1.13rem;
+  width: 200px;
+}
+
+@media screen and (min-width: 761px){
+  .btn-hero{
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 761px) and (max-width: 1220px){
+  .hero-callout {
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 761px) and (max-width: 960px){}
+  .hero-callout {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+@media screen and (max-width: 761px){
+  .rover-hero-container{
+    background: none;
+    padding: 0;
+  }
+  
+  .hero-callout{
+    max-width: 100%;
+    padding: 20px;
+    width: auto;
+  }
+
+  .hero_hdr {
+    display: none;
+  }
+
+  .hero_tagline {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .btn-hero {
+    width: 100%;
+    padding-right: 20px;
+  }
+}
+
+/* Rover Facts */
+
+.rover-facts-2col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
