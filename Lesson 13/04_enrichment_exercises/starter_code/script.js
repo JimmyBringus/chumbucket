@@ -1,6 +1,17 @@
 // 1
 // Write a function that takes in an array of integers and returns the sum of all the numbers
 
+function arraySum41(summy){
+    let sum = 0;
+    for (let i = 0; i < summy.length; i++) {
+        sum += summy[i];
+    }
+    return sum;
+}
+
+
+console.log(arraySum41([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100, 1000, 10000, 100000]))
+
 // 2
 // Write a function that takes an array of strings and returns the same array in reverse ( without using the array reverse method )
 // Hint: you can iterate through an array backwards using i-- in a loop
