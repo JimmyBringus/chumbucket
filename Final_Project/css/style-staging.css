@@ -1,0 +1,57 @@
+/* Header */
+
+.banana {
+    background-color: black;
+}
+
+.bl-site-header {
+    height: 100px;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.bl-nav-outercontainer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.bl-logo-innertext a{
+    color: black;
+}
+
+
+.bl-logo-container {
+    background-image: url("/img/bananaaaaa.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bl-logo-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.bl-logo-container a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.bl-header-right ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.bl-navigation li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* Body */
+
+
