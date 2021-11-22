@@ -12,37 +12,44 @@ ul {
     list-style: none;
 }
 
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.dark-mode {
+    background-color: rgb(38, 38, 38);
+    color: rgb(204, 204, 204);
+}
+
 
 /* Header */
 
 body {
     font-family: 'Nunito', Arial, sans-serif;
+    background-color: beige;
 }
 
-
-
-.body-override {
-    
-}
 
 .banana-logo {
     max-width: 75px;
 }
 
-.bl-nav-outercontainer {
+.bf-nav-outercontainer {
     height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 20px 10px 0px 10px;
+    margin: 10px 30px 10px 30px;
 }
 
-.bl-logo-innertext a{
+.bf-logo-innertext a{
     color: black;
 }
 
 
-.bl-logo-container {
+.bf-logo-container {
     background-image: url("./assets/banana_2.svg");
     background-size: 50px;
     background-repeat: no-repeat;
@@ -51,43 +58,205 @@ body {
 }
 
 
-
-.bl-logo-container a {
+.bf-logo-container a {
     color: black;
 }
 
-.bl-logo-container a:visited {
+.bf-logo-container a:visited {
     color: black;
 }
 
-.bl-header-right ul {
+.bf-header-right ul {
     display: flex;
     justify-content: flex-end;
     width: 500px;
     font-weight: 500;
     font-size: 24px;
-    gap: 25px;
-    padding-right: 30px;
+    gap: 40px;
     padding-top: 30px;
 }
 
-.bl-navigation li {
+.bf-navigation li {
     align-self: flex-end;
 }
 
-.bl-navigation li a{
+.bf-navigation li a{
     text-decoration: none;
     color: black;
 }
 
+.bf-navlink:hover {
+    color: orangered;
+}
 
 
 /* Body */
 
-.bl-homepage-hero{
+.bf-homepage-hero{
+    min-height: 400px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 30px 10px 30px;
+    background-image: url(./assets/Woman_selling_green_unripe_banana.png);
+    background-size: 130%;
+    background-repeat: no-repeat;
+    background-position: 0% 65%;
+    border-radius: 4px;
 
 }
 
+.bf-homepage-hero-innerbox {
+    width: 30%;
+    margin-right: 250px;
+    padding: 40px;
+    background-color: rgba(240, 240, 240, .90);
+    border-radius: 5px;
+    font-size: 24px;
+    margin: 20px 200px 20px 0px;
+}
+
+.bf-homepage-hero-innerbox h2 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.bf-homepage-hero-innerbox p {
+    padding: 10px;
+    height: 75%;
+    width: 100%;
+    text-align: center;
+}
+
+.bf-homepage-innerbox-register {
+    border-radius: 10px;
+    background-color: gold;
+    cursor: pointer;
+    border-bottom: 3px solid goldenrod;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 10px 20px 10px 20px;
+    display: block;
+    margin: 15px auto;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.bf-homepage-innerbox-register:hover {
+    border-radius: 10px;
+    background-color: goldenrod;
+    cursor: pointer;
+    color: black;
+    font-weight: 700px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px 20px 10px 20px;
+    display: block;
+    margin: 15px auto;
+    font-size: 42px;
+}
+
+.bf-testamonial-container {
+    display: flex;
+    gap: 10px;
+    min-height: 350px;
+    margin: 20px 30px 10px 30px;
+    justify-content: center;
+}
+
+.bf-test-dimensions {
+    border: 4px solid tomato;
+    min-width: 25%;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    border-radius: 10px;
+}
+
+.bf-story-button {
+    border-radius: 10px;
+    background-color: gold;
+    cursor: pointer;
+    border-bottom: 3px solid goldenrod;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    display: block;
+    margin: 10px auto;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.bf-story-button:hover {
+    border-radius: 10px;
+    background-color: goldenrod;
+    cursor: pointer;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    display: block;
+    margin: 10px auto;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+/* Footer */
+
+.bf-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 10px 10px;
+    margin: 0px 30px 0px 30px;
+    background-color: navy;
+    color: azure;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.bf-footer-nav-list {
+    display: flex;
+    gap: 30px;
+    color: azure;
+}
+
+.bf-footer-button {
+    border-radius: 10px;
+    height: 25px;
+    width: 65px;
+    background-color: darkgray;
+    margin-top: 10px;
+    cursor: pointer;
+    border-bottom: 3px solid gray;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+}
+
+.bf-footer-button:hover{
+    background-color: gray;
+    border-bottom: 3px solid rgb(34, 34, 34);
+    color: black;
+}
+
+.bf-footer-click {
+    color: black;
+    background-color: gray;
+    border-bottom: 0px;
+    box-shadow: 0px 2px 2px 2px black inset;
+    cursor: pointer;
+    font-weight: 600;
+    height: 25px;
+    width: 65px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.bf-nav a {
+    color: azure;
+}
 
 @media only screen and (min-width: 1200px){
 
