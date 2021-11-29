@@ -96,6 +96,33 @@ body {
     color: rgb(204, 204, 204);
 }
 
+.hamburger {
+    max-width: 36px;
+    display: none;
+    overflow: hidden;
+}
+
+.hamburger-clicked {
+    margin-top: 190px;
+}
+
+.hamburger > img {
+    max-width: 100%;
+}
+
+.navigation {
+    float: right;
+}
+
+.horizontal-nav {
+    padding: 0;
+    list-style: none;
+}
+
+.horizontal-nav li {
+    display: inline-block;
+}
+
 
 /* Index CSS */
 
@@ -116,6 +143,7 @@ body {
 .bf-homepage-hero-1200 {
     display: none;
 }
+
 
 .bf-homepage-hero-innerbox {
     width: 30%;
@@ -419,11 +447,13 @@ body {
     margin: 0px 30px 0px 30px;
 }
 
+
 /* About CSS */
 
 .bf-about-container {
     display: block;
     justify-content: flex-start;
+    text-align: left;
     border-top: 2px black solid;
     text-align: center;
     margin: 0px 30px 30px 30px;
@@ -436,6 +466,21 @@ body {
 
 .bf-about-container-dark {
     border-top: 2px solid rgb(204, 204, 204);
+}
+
+.about-content{
+    text-align: left;
+    padding-top: 100px;
+    margin-right: 500px;
+    margin-left: 200px;
+}
+
+.about-content h2 {
+    margin-bottom: 400px;
+}
+
+.about-content p {
+    font-size: 8px;
 }
 
 
@@ -468,6 +513,10 @@ body {
         margin-right: auto;
         text-align: center;
         border-top: solid black 2px;
+    }
+    
+    .bf-homepage-hero-1200-hamclicked {
+        padding-top: 500px;
     }
 
     .bf-homepage-hero-1200 h2 {
@@ -508,8 +557,66 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
+
+    .about-content {
+        margin-right: 50px;
+        margin-left: 0px;
+    }
 }
 
-@media only screen and (min-width: 850px){
+@media only screen and (max-width: 992px){
+    /* Adjustments for Nav Links */
+    .hamburger {
+        display: block;
+        float: right;
+    }
 
+    .navigation {
+        display: none;
+        width: auto;
+        float: none;
+    }
+
+    .showNav {
+        display: block;
+    }
+
+    .horizontal-nav {
+        display: block;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .horizontal-nav li {
+        gap: 0;
+    }
+
+    .bf-navigation li {
+        margin-right: 0;
+    }
+
+    .bf-header-right ul {
+        gap: 0;
+    }
+
+    .bf-homepage-innberbox-1200 {
+        width: 85%;
+    }
+
+    .tos-container iframe {
+        width: 560px;
+        height: 297px;
+    }
+
+    .bf-footer-left {
+        display: none;
+    }
+
+    .bf-footer-right {
+        display: none;
+    }
+
+    .bf-theme-box {
+        margin-left: 200px;
+    }
 }

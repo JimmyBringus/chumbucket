@@ -8,6 +8,12 @@ let darkNav = document.querySelectorAll(".bf-navlink");
 var footer = document.querySelector('.bf-footer');
 var footerbtn = document.querySelector('.bf-footer-button');
 
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".hamburger").addEventListener("click", function () {
+      document.querySelector(".navigation").classList.toggle("showNav");
+      document.querySelector(".hamburger").classList.toggle("hamburger-clicked");
+    });
+  });
 
 document.addEventListener('DOMContentLoaded', function(event){
     let allDarkButtons = document.querySelectorAll('.bf-footer-button-dark')
@@ -32,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function(event){
     darkBtnImpress.classList.add('bt-footer-click-enable');
     lightBtnImpress.classList.add('bf-footer-click');
     lightBtnImpress.classList.add('bf-footer-click-disable');
+    document.querySelector('.hamburger_img').setAttribute("src", "./css/assets/Hamburger_icon_light.png"); 
 }
 
 
@@ -46,6 +53,7 @@ function themeDark(){
     lightBtnImpress.classList.remove('bf-footer-click');
     lightBtnImpress.classList.remove('bf-footer-click-disable');
     lightBtnImpress.classList.add('bt-footer-click-enable');
+    document.querySelector('.hamburger_img').setAttribute("src", "./css/assets/Hamburger_icon_dark.png");
 };
 
 function toggleDarkNavLinks(){

@@ -10,8 +10,13 @@ var testDimensions = document.querySelectorAll('.bf-test-dimensions');
 var footer = document.querySelectorAll('.bf-footer');
 var registrationButton = document.querySelector('.bf-homepage-innerbox-register');
 
-
-
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".hamburger").addEventListener("click", function () {
+    document.querySelector(".navigation").classList.toggle("showNav");
+    document.querySelector(".hamburger").classList.toggle("hamburger-clicked");
+    document.querySelector(".bf-homepage-hero-innerbox-1200").classList.toggle(".bf-homepage-hero-1200-hamclicked");
+  });
+});
 
 document.addEventListener('DOMContentLoaded', function(event){
   // if (window.localStorage.pageTheme == 'light'){
@@ -42,6 +47,7 @@ function themeLight(){
   darkBtnImpress.classList.add('bt-footer-click-enable');
   lightBtnImpress.classList.add('bf-footer-click');
   lightBtnImpress.classList.add('bf-footer-click-disable');
+  document.querySelector('.hamburger_img').setAttribute("src", "./css/assets/Hamburger_icon_light.png"); 
 }
 
 
@@ -58,6 +64,7 @@ function themeDark(){
   lightBtnImpress.classList.remove('bf-footer-click');
   lightBtnImpress.classList.remove('bf-footer-click-disable');
   lightBtnImpress.classList.add('bt-footer-click-enable');
+  document.querySelector('.hamburger_img').setAttribute("src", "./css/assets/Hamburger_icon_dark.png");
 };
 
 

@@ -1,21 +1,17 @@
 window.onload = themeLight;
 var darkBtnImpress = document.querySelector(".bf-footer-button-dark");
 var lightBtnImpress = document.querySelector(".bf-footer-button-light");
-var aboutCardBodies = document.querySelectorAll('.bf-card-body');
+var darkBody = document.querySelector(".bf-body");
+let darkNav = document.querySelectorAll(".bf-navlink");
 var footer = document.querySelector('.bf-footer');
 var footerbtn = document.querySelector('.bf-footer-button');
-var darkBody = document.querySelector(".bf-body");
-var darkNav = document.querySelectorAll(".bf-navlink");
-var aboutContainer = document.querySelector('.bf-about-card-container');
-
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector(".hamburger").addEventListener("click", function () {
-    document.querySelector(".navigation").classList.toggle("showNav");
-    document.querySelector(".hamburger").classList.toggle("hamburger-clicked");
+    document.querySelector(".hamburger").addEventListener("click", function () {
+      document.querySelector(".navigation").classList.toggle("showNav");
+      document.querySelector(".hamburger").classList.toggle("hamburger-clicked");
+    });
   });
-});
-
 document.addEventListener('DOMContentLoaded', function(event){
     let allDarkButtons = document.querySelectorAll('.bf-footer-button-dark')
     for (let button of allDarkButtons){
@@ -25,31 +21,28 @@ document.addEventListener('DOMContentLoaded', function(event){
     for (let button of allLightButtons){
       button.addEventListener('click',themeLight);
     };
-})
+});
 
-function themeLight(){
+
+ function themeLight(){
     window.localStorage.pageTheme = 'light';
     darkBody.classList.remove("bf-body-dark-mode");
-    aboutContainer.classList.remove("bf-about-card-container-dark")
     toggleLightNavLinks();
     toggleFooterLight();
-    toggleAboutCardBodyLight();
     darkBtnImpress.classList.remove('bf-footer-click');
     darkBtnImpress.classList.remove('bf-footer-click-disable');
     darkBtnImpress.classList.add('bt-footer-click-enable');
     lightBtnImpress.classList.add('bf-footer-click');
     lightBtnImpress.classList.add('bf-footer-click-disable');
     document.querySelector('.hamburger_img').setAttribute("src", "./css/assets/Hamburger_icon_light.png"); 
-};
-  
-  
+}
+
+
 function themeDark(){
     window.localStorage.pageTheme = 'dark';
     darkBody.classList.add("bf-body-dark-mode");
-    aboutContainer.classList.add("bf-about-card-container-dark");
     toggleDarkNavLinks();
     toggleFooterDark();
-    toggleAboutCardBodyDark();
     darkBtnImpress.classList.add('bf-footer-click');
     darkBtnImpress.classList.add('bf-footer-click-disable');
     lightBtnImpress.classList.remove('bf-footer-click');
@@ -57,37 +50,23 @@ function themeDark(){
     lightBtnImpress.classList.add('bt-footer-click-enable');
     document.querySelector('.hamburger_img').setAttribute("src", "./css/assets/Hamburger_icon_dark.png");
 };
-  
 
+function toggleDarkNavLinks(){
+    for (i = 0; i < darkNav.length; i++){
+      darkNav[i].classList.add('bf-nav-dark-mode');
+    }
+};
 
 function toggleFooterDark() {
     footer.classList.add("bf-footer-dark")
 };
 
-function toggleFooterLight() {
-    footer.classList.remove("bf-footer-dark")
-};
-
-function toggleAboutCardBodyLight() {
-    for (i=0; i < aboutCardBodies.length; i++){
-      aboutCardBodies[i].classList.remove("bf-card-body-dark")
-    }
-};
-
-function toggleAboutCardBodyDark() {
-    for (i=0; i < aboutCardBodies.length; i++){
-      aboutCardBodies[i].classList.add("bf-card-body-dark")
-    };
-};
-
-function toggleDarkNavLinks(){
-    for (i = 0; i < darkNav.length; ++i){
-      darkNav[i].classList.add('bf-nav-dark-mode')
-    }
-};
-
 function toggleLightNavLinks(){
-    for (i = 0; i < darkNav.length; ++i){
-      darkNav[i].classList.remove('bf-nav-dark-mode')
+    for (i = 0; i < darkNav.length; i++){
+    darkNav[i].classList.remove('bf-nav-dark-mode');
     }
+};
+
+function toggleFooterLight() {
+    footer.classList.remove("bf-footer-dark");
 };
