@@ -1,11 +1,14 @@
+window.onload = themeLight;
 // window.localStorage.pageTheme = "";
-let btnImpress = document.querySelector(".bf-footer-button");
+var darkBtnImpress = document.querySelector(".bf-footer-button-dark");
+var lightBtnImpress = document.querySelector(".bf-footer-button-light");
 var darkBody = document.querySelector(".bf-body");
 var darkHeroInner = document.querySelector(".bf-homepage-hero-innerbox");
 var darkNav = document.querySelectorAll(".bf-navlink");
 var footerbtn = document.querySelector('.bf-footer-button');
 var testDimensions = document.querySelectorAll('.bf-test-dimensions');
 var footer = document.querySelectorAll('.bf-footer');
+var registrationButton = document.querySelector('.bf-homepage-innerbox-register');
 
 
 
@@ -28,21 +31,33 @@ document.addEventListener('DOMContentLoaded', function(event){
 
 function themeLight(){
   window.localStorage.pageTheme = 'light';
-        darkBody.classList.remove("bf-body-dark-mode");
-        darkHeroInner.classList.remove("bf-homepage-hero-innerbox-dark-mode");
-        toggleLightNavLinks();
-        toggleLightTestDimensions();
-        toggleFooterLight();
+  darkBody.classList.remove("bf-body-dark-mode");
+  darkHeroInner.classList.remove("bf-homepage-hero-innerbox-dark-mode");
+  registrationButton.classList.remove('bf-homepage-innerbox-register-dark');
+  toggleLightNavLinks();
+  toggleLightTestDimensions();
+  toggleFooterLight();
+  darkBtnImpress.classList.remove('bf-footer-click');
+  darkBtnImpress.classList.remove('bf-footer-click-disable');
+  darkBtnImpress.classList.add('bt-footer-click-enable');
+  lightBtnImpress.classList.add('bf-footer-click');
+  lightBtnImpress.classList.add('bf-footer-click-disable');
 }
 
 
 function themeDark(){
   window.localStorage.pageTheme = 'dark';
-        darkBody.classList.add("bf-body-dark-mode");
-        darkHeroInner.classList.add("bf-homepage-hero-innerbox-dark-mode");
-        toggleDarkNavLinks();
-        toggleDarkTestDimensions();
-        toggleFooterDark();
+  darkBody.classList.add("bf-body-dark-mode");
+  darkHeroInner.classList.add("bf-homepage-hero-innerbox-dark-mode");
+  registrationButton.classList.add('bf-homepage-innerbox-register-dark');
+  toggleDarkNavLinks();
+  toggleDarkTestDimensions();
+  toggleFooterDark();
+  darkBtnImpress.classList.add('bf-footer-click');
+  darkBtnImpress.classList.add('bf-footer-click-disable');
+  lightBtnImpress.classList.remove('bf-footer-click');
+  lightBtnImpress.classList.remove('bf-footer-click-disable');
+  lightBtnImpress.classList.add('bt-footer-click-enable');
 };
 
 

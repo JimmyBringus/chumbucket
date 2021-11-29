@@ -1,3 +1,6 @@
+window.onload = themeLight;
+var darkBtnImpress = document.querySelector(".bf-footer-button-dark");
+var lightBtnImpress = document.querySelector(".bf-footer-button-light");
 var aboutCardBodies = document.querySelectorAll('.bf-card-body');
 var footer = document.querySelector('.bf-footer');
 var footerbtn = document.querySelector('.bf-footer-button');
@@ -18,21 +21,31 @@ document.addEventListener('DOMContentLoaded', function(event){
 
 function themeLight(){
     window.localStorage.pageTheme = 'light';
-        darkBody.classList.remove("bf-body-dark-mode");
-        aboutContainer.classList.remove("bf-about-card-container-dark")
-        toggleLightNavLinks();
-        toggleFooterLight();
-        toggleAboutCardBodyLight();
+    darkBody.classList.remove("bf-body-dark-mode");
+    aboutContainer.classList.remove("bf-about-card-container-dark")
+    toggleLightNavLinks();
+    toggleFooterLight();
+    toggleAboutCardBodyLight();
+    darkBtnImpress.classList.remove('bf-footer-click');
+    darkBtnImpress.classList.remove('bf-footer-click-disable');
+    darkBtnImpress.classList.add('bt-footer-click-enable');
+    lightBtnImpress.classList.add('bf-footer-click');
+    lightBtnImpress.classList.add('bf-footer-click-disable');
 };
   
   
 function themeDark(){
     window.localStorage.pageTheme = 'dark';
-          darkBody.classList.add("bf-body-dark-mode");
-          aboutContainer.classList.add("bf-about-card-container-dark");
-          toggleDarkNavLinks();
-          toggleFooterDark();
-          toggleAboutCardBodyDark();
+    darkBody.classList.add("bf-body-dark-mode");
+    aboutContainer.classList.add("bf-about-card-container-dark");
+    toggleDarkNavLinks();
+    toggleFooterDark();
+    toggleAboutCardBodyDark();
+    darkBtnImpress.classList.add('bf-footer-click');
+    darkBtnImpress.classList.add('bf-footer-click-disable');
+    lightBtnImpress.classList.remove('bf-footer-click');
+    lightBtnImpress.classList.remove('bf-footer-click-disable');
+    lightBtnImpress.classList.add('bt-footer-click-enable');
 };
   
 

@@ -1,4 +1,6 @@
-var btnImpress = document.querySelector(".bf-footer-button");
+window.onload = themeLight;
+var darkBtnImpress = document.querySelector(".bf-footer-button-dark");
+var lightBtnImpress = document.querySelector(".bf-footer-button-light");
 var aboutContainer = document.querySelector('.bf-about-container');
 var aboutCardBodies = document.querySelectorAll('.bf-card-body');
 var darkBody = document.querySelector(".bf-body");
@@ -21,19 +23,29 @@ document.addEventListener('DOMContentLoaded', function(event){
 
  function themeLight(){
     window.localStorage.pageTheme = 'light';
-        darkBody.classList.remove("bf-body-dark-mode");
-        toggleLightNavLinks();
-        toggleFooterLight();
-        aboutContainer.classList.remove("bf-about-container-dark");
+    darkBody.classList.remove("bf-body-dark-mode");
+    toggleLightNavLinks();
+    toggleFooterLight();
+    aboutContainer.classList.remove("bf-about-container-dark");
+    darkBtnImpress.classList.remove('bf-footer-click');
+    darkBtnImpress.classList.remove('bf-footer-click-disable');
+    darkBtnImpress.classList.add('bt-footer-click-enable');
+    lightBtnImpress.classList.add('bf-footer-click');
+    lightBtnImpress.classList.add('bf-footer-click-disable');
 }
 
 
 function themeDark(){
     window.localStorage.pageTheme = 'dark';
-        darkBody.classList.add("bf-body-dark-mode");
-        toggleDarkNavLinks();
-        toggleFooterDark();
-        aboutContainer.classList.add("bf-about-container-dark");
+    darkBody.classList.add("bf-body-dark-mode");
+    toggleDarkNavLinks();
+    toggleFooterDark();
+    aboutContainer.classList.add("bf-about-container-dark");
+    darkBtnImpress.classList.add('bf-footer-click');
+    darkBtnImpress.classList.add('bf-footer-click-disable');
+    lightBtnImpress.classList.remove('bf-footer-click');
+    lightBtnImpress.classList.remove('bf-footer-click-disable');
+    lightBtnImpress.classList.add('bt-footer-click-enable');
 };
 
 function toggleDarkNavLinks(){

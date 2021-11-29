@@ -39,34 +39,35 @@
             </section>
     
         </header>
-        <div class="bf-registration-container" id="bf-registration-border">                         <form class="bf-registration-form">
+        <div class="bf-registration-container" id="bf-registration-border">                         
+            <form class="bf-registration-form" method="POST">
                 <div class="bf-form-body">
                     <div class="bf-form-firstName">
                         <label for="firstName" class="form-label">First Name</label>
-                        <input type="text" aria-label="firstName">
+                        <input type="text" aria-label="firstName" placeholder="Required" required>
                     </div>
                     <div class="bf-form-lastName">
                         <label for="lastName" class="form-label">Last Name</label>
-                        <input type="text" aria-label="lastName">                    
+                        <input type="text" aria-label="lastName" placeholder="Required" required>                    
                     </div>
                     <div class="bf-form-email">
                         <label for="emailInput" class="form-label">Email Address</label>
-                        <input type="email" aria-label="emailAddress">
+                        <input type="email" aria-label="emailAddress" placeholder="Required" required>
                         <div id="email-help" class="form-text">We will use your email account for correspondence during the transformation stage</div>
                     </div>
                     <div class="bf-form-date">
-
+                        <label for="transiton">Earliest Availability</label>
+                        <input type="date" id="transition-date" name="tran-start" min="2021-11-29" class="form-control">
                     </div>
                     <div class="form-textArea">
                         <span class="textArea-text">Deepest Secret</span>
-                        <textarea class="form-control" placeholder="Describe your deepest, darkest, secret. It is the key to a successful transformation." style="height: 200px;" aria-label="Deepest Secret"></textarea>
+                        <textarea required class="form-control" placeholder="Describe your deepest, darkest, secret. It is the key to a successful transformation." style="height: 200px;" aria-label="Deepest Secret"></textarea>
                     </div>
                     <div>
-                        <input type="checkbox" class="form-checkbox" id="check1">
+                        <input type="checkbox" class="form-checkbox" id="check1" required>
                         <label class="form-checkbox-label" for="check1">I have read and consent to the <a href="./tos.html">Terms of Service</a></label>
                     </div>
-                    <div id="liveAlertPlaceholder"></div>
-                    <input type="submit" class="btn btn-primary btn-lg form-button">
+                    <button type="submit" class="btn btn-primary btn-lg form-button" id="liveAlertBtn">Submit</button>
                 </div>
             </form>
             <div class="bf-resister-image-container">
