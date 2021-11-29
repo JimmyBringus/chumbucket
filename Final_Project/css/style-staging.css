@@ -603,6 +603,10 @@ body {
         width: 85%;
     }
 
+    .tos-container {
+        margin-right: 70px;
+    }
+
     .tos-container iframe {
         width: 560px;
         height: 297px;
