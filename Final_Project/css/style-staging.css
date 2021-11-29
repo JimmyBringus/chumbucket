@@ -17,17 +17,20 @@ h1 {
     font-weight: 700;
 }
 
-.dark-mode {
-    background-color: rgb(38, 38, 38);
+/* Dark Mode */
+
+.bf-body-dark-mode {
+    background: rgb(38, 38, 38);
     color: rgb(204, 204, 204);
+    border-top: rgb(204, 204, 204);
 }
 
-
+ 
 /* Header */
 
 body {
     font-family: 'Nunito', Arial, sans-serif;
-    background-color: beige;
+    background: beige;
 }
 
 
@@ -80,7 +83,7 @@ body {
     align-self: flex-end;
 }
 
-.bf-navigation li a{
+.bf-navlink{
     text-decoration: none;
     color: black;
 }
@@ -89,10 +92,14 @@ body {
     color: orangered;
 }
 
+.bf-nav-dark-mode {
+    color: rgb(204, 204, 204);
+}
+
 
 /* Body */
 
-.bf-homepage-hero, .bf-about-container {
+.bf-homepage-hero {
     min-height: 400px;
     align-items: center;
     display: flex;
@@ -114,10 +121,15 @@ body {
     width: 30%;
     margin-right: 250px;
     padding: 40px;
-    background-color: rgba(240, 240, 240, .90);
+    background: rgba(240, 240, 240, .90);
     border-radius: 5px;
     font-size: 24px;
     margin: 20px 200px 20px 0px;
+}
+
+.bf-homepage-hero-innerbox-dark-mode {
+    background: rgba(38, 38, 38, .90);
+    color: rgb(204, 204, 204);
 }
 
 .bf-homepage-hero-innerbox h2 {
@@ -134,7 +146,7 @@ body {
 
 .bf-homepage-innerbox-register {
     border-radius: 10px;
-    background-color: gold;
+    background: gold;
     cursor: pointer;
     border-bottom: 3px solid goldenrod;
     color: white;
@@ -149,7 +161,7 @@ body {
 
 .bf-homepage-innerbox-register:hover {
     border-radius: 10px;
-    background-color: goldenrod;
+    background: goldenrod;
     cursor: pointer;
     color: black;
     font-weight: 700px;
@@ -177,9 +189,13 @@ body {
     border-radius: 10px;
 }
 
+.bf-test-dimensions-dark-mode {
+    border: 4px solid rgb(204, 204, 204);
+}
+
 .bf-story-button {
     border-radius: 10px;
-    background-color: gold;
+    background: gold;
     cursor: pointer;
     border-bottom: 3px solid goldenrod;
     color: white;
@@ -193,7 +209,7 @@ body {
 
 .bf-story-button:hover {
     border-radius: 10px;
-    background-color: goldenrod;
+    background: goldenrod;
     cursor: pointer;
     color: black;
     text-align: center;
@@ -218,7 +234,8 @@ body {
 }
 
 .bf-banana-test-image-3{
-    object-position: 10% 70%;    
+    object-position: 0% 70%;
+    border-left: none;    
 }
 
 /* Footer */
@@ -228,24 +245,32 @@ body {
     justify-content: space-between;
     padding: 0px 10px 0px 10px;
     margin: 0px 30px 0px 30px;
-    background-color: navy;
-    color: azure;
+    background: orange;
+    color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+}
+.bf-theme-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.bf-footer-dark {
+    background: black;
+    color: rgb(204, 204, 204);
 }
 
 .bf-footer-nav-list {
     display: flex;
     gap: 30px;
-    color: azure;
 }
 
-.bf-footer-button {
+.bf-footer-button-dark {
     border-radius: 10px;
     height: 25px;
     width: 65px;
-    background-color: darkgray;
-    margin-top: 10px;
+    background: darkgray;
     cursor: pointer;
     border-bottom: 3px solid gray;
     color: black;
@@ -253,15 +278,33 @@ body {
     text-align: center;
 }
 
-.bf-footer-button:hover{
-    background-color: gray;
+.bf-footer-button-light {
+    border-radius: 10px;
+    height: 25px;
+    width: 65px;
+    background: white;
+    cursor: pointer;
+    border-bottom: 3px solid rgb(204, 204, 204);
+    color: black;
+    font-weight: 600;
+    text-align: center;
+}
+
+.bf-footer-button-dark:hover{
+    background: gray;
+    border-bottom: 3px solid rgb(34, 34, 34);
+    color: black;
+}
+
+.bf-footer-button-light:hover{
+    background: rgb(204, 204, 204);
     border-bottom: 3px solid rgb(34, 34, 34);
     color: black;
 }
 
 .bf-footer-click {
     color: black;
-    background-color: gray;
+    background: gray;
     border-bottom: 0px;
     box-shadow: 0px 2px 2px 2px black inset;
     cursor: pointer;
@@ -274,11 +317,7 @@ body {
     padding-top: 2px;
 }
 
-.bf-nav a {
-    color: azure;
-}
-
-/* Form CSS */
+/* Registration CSS */
 
 .bf-registration-form {
     width: 50%;
@@ -313,6 +352,10 @@ body {
     padding-top: 10px;
 }
 
+.bf-registration-container-dark {
+    border-top: solid 2px rgb(204, 204, 204);
+}
+
 .bf-register-banana {
     width: 120%;
     padding-right: 50px;
@@ -325,6 +368,10 @@ body {
     justify-content: space-around;
     margin: 0px 30px 20px 30px;
     border-top: 2px black solid;
+}
+
+.bf-about-card-container-dark {
+    border-top: 2px solid rgb(204, 204, 204);
 }
 
 .bf-about-card {
@@ -341,6 +388,40 @@ body {
     padding: 10px;
     background: white;
 } 
+
+.bf-card-body-dark {
+    background: rgb(28, 28, 28);
+}
+
+/* TOS CSS */
+
+.tos-container {
+    display: flex;
+    justify-content: center;
+    border-top: 2px black solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px 30px 0px 30px;
+}
+
+/* About CSS */
+
+.bf-about-container {
+    display: block;
+    justify-content: flex-start;
+    border-top: 2px black solid;
+    text-align: center;
+    margin: 0px 30px 30px 30px;
+
+}
+
+.bf-about-container h1 {
+    vertical-align: middle;
+}
+
+.bf-about-container-dark {
+    border-top: 2px solid rgb(204, 204, 204);
+}
 
 
 @media only screen and (max-width: 1200px){
